@@ -6,6 +6,28 @@ body {
 	overflow: hidden;
 }
 
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.overlay.vertical-border {
+	border-left: #000 1em solid;
+	border-right: #000 1em solid;
+	z-index: -1;
+}
+
+.overlay.image {
+	background: url("../resource/overlay.png") center center no-repeat;
+	background-size: cover;
+	z-index: 1;
+	pointer-events: none;
+}
+
 .vertical-center {
 	min-height: 90%;  /* Fallback for browsers do NOT support vh unit */
 	min-height: 90vh; /* These two lines are counted as one :-)       */
