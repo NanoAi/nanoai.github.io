@@ -1,60 +1,45 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 	<head>
-		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="theme-color" content="#1E1E1E">
-
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Mirai.Red</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/main.css">
-
-		<title>Hello, world!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
-	<body>
-		<div class="loader">
-			<div>
-				<h1>Role Picker</h1>
-				<img src="./loading.gif"/>
-			</div>
-			<form>
-				<input id="rolesData" type="text" class="form-control form-control-lg" placeholder="Roles Data">
-				<input id="assignedRoles" type="text" class="form-control form-control-lg" placeholder="`|gr` Result">
-				<button id="submit" type="submit" class="btn btn-primary">Submit</button>
-				<small>Psst! If you're just lookin' you can use <a href="./mock.json" target="_blank">this</a> as the raw input in the `Roles Data` box!</small>
-			</form>
-		</div>
-		<div class="background"></div>
-		<div class="body">
-			<div class="banner">
-				<h1><span>Select Your Roles!</span></h1>
-			</div>
-			<div class="scroller">
-				<div class="list-group">
+	<body style="background-color: #331c28;">
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="d-flex vertical-center">
+			<div class="container-fluid">
+				<div class="align-bottom text-lg-center bigger">
+					Mirai.Red
+				</div>
+				<nav class="nav align-middle justify-content-center">
+					<a class="nav-link" href="https://mirai.red/discord">
+						<img src="./resource/discord.png"/>
+						<p class="text-center">Discord</p>
+					</a>
+					<a class="nav-link" href="https://www.patreon.com/miraired">
+						<img src="./resource/patreon.png"/>
+						<p class="text-center">Patreon</p>
+					</a>
+					<a class="nav-link" href="https://github.com/NanoAi">
+						<img src="./resource/github.png"/>
+						<p class="text-center">Github</p>
+					</a>
+					<a class="nav-link" href="https://github.com/NanoAi/minecraft-server/wiki">
+						<img src="./resource/server.png"/>
+						<p class="text-center">Server Info</p>
+					</a>
+				</nav>
+				<div class="align-bottom text-lg-center">
+					Don't Panic - It's Just Another Community
 				</div>
 			</div>
 		</div>
-
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-
-		<script id="list-template" type="text/x-handlebars-template">
-			{{#each this}}
-			<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-				<div class="d-flex justify-content-between">
-					<h5 class="mb-1">{{role}}</h5>
-					<div class="role-colour" colour="{{colour}}" roleID="{{id}}">
-						<i class="icons">check_circle</i>
-					</div>
-				</div>
-				<p class="mb-1">{{description}}</p>
-			</a>
-			{{/each}}
-		</script>
-
-		<script src="./js/main.js"></script>
 	</body>
 </html>
