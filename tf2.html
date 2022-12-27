@@ -1,9 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; URL='steam://connect/tf2.boxfox.org'" />
+    <script type="text/javascript">
+        // Source: https://github.com/jdfreder/pingjs
+        !function(n,e){"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():n.ping=e()}(this,(function(){return function(n,e){return new Promise((function(o,t){var r=(new Date).getTime(),i=function(){var n=(new Date).getTime()-r;o(n*=e||1)};(function(n){return new Promise((function(e,o){var t=new Image;t.onload=function(){e(t)},t.onerror=function(){o(n)},t.src=n+"?random-no-cache="+Math.floor(65536*(1+Math.random())).toString(16)}))})(n).then(i).catch(i),setTimeout((function(){t(Error("Timeout"))}),5e3)}))}}));
+        let ip = "tf2.boxfox.org:27015";
+        ping(ip).then(function(delta) {
+            window.location.replace("steam://connect/" + ip);
+        }).catch(function(error) {
+            alert(String(error) + "\nLooks like the server isn't responding.");
+        });
+    </script>
   </head>
   <body>
+    <img src="tf2.boxfox.org:27015" style="position:fixed;top:0;left:0;width:1px;height:1px;"/>
     <a href="steam://connect/tf2.boxfox.org">
       If you're not automatically redirected, click this giant link thing. It's okay I won't tell anyone that you did.
     </a>
